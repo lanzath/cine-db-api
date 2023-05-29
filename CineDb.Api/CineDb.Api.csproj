@@ -10,4 +10,11 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CineDb.Domain.Command\CineDb.Domain.Command.csproj" />
+    <ProjectReference Include="..\CineDb.Domain.Query\CineDb.Domain.Query.csproj" />
+    <ProjectReference Include="..\CineDb.Domain\CineDb.Domain.csproj" />
+    <ProjectReference Include="..\CineDb.Infrastructure.Database\CineDb.Infrastructure.Database.csproj" />
+  </ItemGroup>
+
 </Project>
