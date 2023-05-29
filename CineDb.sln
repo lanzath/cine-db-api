@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineDb.Api", "CineDb.Api\CineDb.Api.csproj", "{89B0EF3B-C2E1-4462-A5CB-C02A2BD061BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineDb.Domain", "CineDb.Domain\CineDb.Domain.csproj", "{562A73E1-38CA-4F2F-BBC5-2A8581C5362B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineDb.Domain.Command", "CineDb.Domain.Command\CineDb.Domain.Command.csproj", "{2764D834-0732-4723-BD8A-E91A60C6D242}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineDb.Domain.Query", "CineDb.Domain.Query\CineDb.Domain.Query.csproj", "{0A406C37-4B50-4708-AB39-AE9343FEAC82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineDb.Domain.Test", "CineDb.Domain.Test\CineDb.Domain.Test.csproj", "{3AC50E2F-1768-41F9-A9DB-35B8165870C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineDb.Infrastructure.Database", "CineDb.Infrastructure.Database\CineDb.Infrastructure.Database.csproj", "{1E2CAD40-1AC6-496B-A2E3-2A13BED4690A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89B0EF3B-C2E1-4462-A5CB-C02A2BD061BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89B0EF3B-C2E1-4462-A5CB-C02A2BD061BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89B0EF3B-C2E1-4462-A5CB-C02A2BD061BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89B0EF3B-C2E1-4462-A5CB-C02A2BD061BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{562A73E1-38CA-4F2F-BBC5-2A8581C5362B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{562A73E1-38CA-4F2F-BBC5-2A8581C5362B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{562A73E1-38CA-4F2F-BBC5-2A8581C5362B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{562A73E1-38CA-4F2F-BBC5-2A8581C5362B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2764D834-0732-4723-BD8A-E91A60C6D242}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2764D834-0732-4723-BD8A-E91A60C6D242}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2764D834-0732-4723-BD8A-E91A60C6D242}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2764D834-0732-4723-BD8A-E91A60C6D242}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A406C37-4B50-4708-AB39-AE9343FEAC82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A406C37-4B50-4708-AB39-AE9343FEAC82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A406C37-4B50-4708-AB39-AE9343FEAC82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A406C37-4B50-4708-AB39-AE9343FEAC82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AC50E2F-1768-41F9-A9DB-35B8165870C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AC50E2F-1768-41F9-A9DB-35B8165870C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AC50E2F-1768-41F9-A9DB-35B8165870C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AC50E2F-1768-41F9-A9DB-35B8165870C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E2CAD40-1AC6-496B-A2E3-2A13BED4690A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E2CAD40-1AC6-496B-A2E3-2A13BED4690A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E2CAD40-1AC6-496B-A2E3-2A13BED4690A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E2CAD40-1AC6-496B-A2E3-2A13BED4690A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
