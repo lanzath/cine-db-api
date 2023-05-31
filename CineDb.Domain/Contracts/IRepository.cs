@@ -8,5 +8,5 @@ public interface IRepository<TEntity, TId>
     Task AddAsync(TEntity entity);
     Task RemoveAsync(TEntity id);
     Task UpdateAsync(TEntity entity);
-    Task<TEntity?> GetByIdAsync(TId id);
+    Task<TEntity> GetByIdAsync(TId id);
 }

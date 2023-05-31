@@ -18,7 +18,8 @@ public abstract class AbstractRepository<TEntity, TId> : IRepository<TEntity, TI
         await _context.SaveChangesAsync();
     }
 
-    public async Task<TEntity?> GetByIdAsync(TId id)
+    // This method will be invoked only to retrieve existing records, for update purposes.
+    public virtual async Task<TEntity> GetByIdAsync(TId id)
     {
        return await _context.Set<TEntity>().FindAsync(id);
     }

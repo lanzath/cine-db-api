@@ -24,4 +24,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <NoWarn>$(NoWarn);CS8603</NoWarn>
+  </PropertyGroup>
+
 </Project>

@@ -11,7 +11,9 @@ public sealed class MovieProfile : Profile
     {
         CreateMap<CreateMovieCommand, Movie>();
         CreateMap<CreateMovieCommandDirector, Director>();
-        CreateMap<UpdateMovieCommand, Movie>();
-        CreateMap<UpdateMovieCommandDirector, Director>();
+        CreateMap<UpdateMovieCommand, Movie>()
+            .ForMember(dest => dest.DirectorId, opt => opt.Ignore());
+        CreateMap<UpdateMovieCommandDirector, Director>()
+            .ForMember(dest => dest.Id, opt => opt.Ignore());
     }
 }

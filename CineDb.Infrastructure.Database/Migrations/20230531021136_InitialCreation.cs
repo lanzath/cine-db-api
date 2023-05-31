@@ -15,7 +15,8 @@ namespace CineDb.Infrastructure.Database.Migrations
                 name: "Director",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
                     OriginCountry = table.Column<string>(type: "TEXT", nullable: false),
                     Age = table.Column<int>(type: "INTEGER", nullable: false),
@@ -35,7 +36,7 @@ namespace CineDb.Infrastructure.Database.Migrations
                     Title = table.Column<string>(type: "TEXT", nullable: false),
                     Year = table.Column<ushort>(type: "INTEGER", nullable: false),
                     Genre = table.Column<int>(type: "INTEGER", nullable: false),
-                    DirectorId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    DirectorId = table.Column<int>(type: "INTEGER", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "TEXT", nullable: false, defaultValueSql: "DATE('now')")
                 },
                 constraints: table =>

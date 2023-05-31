@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CineDb.Infrastructure.Database.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230530031500_InitialCreation")]
+    [Migration("20230531021136_InitialCreation")]
     partial class InitialCreation
     {
         /// <inheritdoc />
@@ -22,9 +22,9 @@ namespace CineDb.Infrastructure.Database.Migrations
 
             modelBuilder.Entity("CineDb.Domain.Entities.Director", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("Age")
                         .HasColumnType("INTEGER");
@@ -58,8 +58,8 @@ namespace CineDb.Infrastructure.Database.Migrations
                         .HasColumnType("TEXT")
                         .HasDefaultValueSql("DATE('now')");
 
-                    b.Property<Guid>("DirectorId")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("DirectorId")
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("Genre")
                         .HasColumnType("INTEGER");
