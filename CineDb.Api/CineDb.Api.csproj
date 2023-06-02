@@ -26,4 +26,8 @@
     <ProjectReference Include="..\CineDb.Infrastructure.Database\CineDb.Infrastructure.Database.csproj" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <NoWarn>$(NoWarn);CS0618</NoWarn>
+  </PropertyGroup>
+
 </Project>

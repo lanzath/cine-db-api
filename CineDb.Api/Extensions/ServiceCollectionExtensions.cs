@@ -1,10 +1,12 @@
+using System.Reflection;
 using System.Text.Json.Serialization;
 using CineDb.Domain.Command.Mappers;
-using CineDb.Domain.Command.Movies.Create;
+using CineDb.Domain.Command.Commands.Movies.Create;
 using CineDb.Domain.Contracts;
 using CineDb.Domain.Query.Queries.Movies.GetById;
 using CineDb.Infrastructure.Database.EntityFramework;
 using CineDb.Infrastructure.Database.EntityFramework.Repositories;
+using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -23,7 +25,7 @@ public static class ServiceCollectionExtensions
         services.AddTransient<IMovieRepository, MovieRepository>();
 
         services.AddFluentValidationAutoValidation();
-        services.AddFluentValidationClientsideAdapters();
+        services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
         services.AddDbContext<AppDbContext>(options =>
         {

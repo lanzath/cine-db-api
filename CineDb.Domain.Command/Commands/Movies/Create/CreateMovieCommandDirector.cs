@@ -1,4 +1,4 @@
-namespace CineDb.Domain.Command.Movies.Create;
+namespace CineDb.Domain.Command.Commands.Movies.Create;
 
 public sealed class CreateMovieCommandDirector
 {

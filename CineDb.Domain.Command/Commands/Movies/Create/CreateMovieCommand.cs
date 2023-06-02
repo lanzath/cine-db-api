@@ -1,7 +1,7 @@
 using CineDb.Domain.Enums;
 using MediatR;
 
-namespace CineDb.Domain.Command.Movies.Create;
+namespace CineDb.Domain.Command.Commands.Movies.Create;
 
 public sealed class CreateMovieCommand : IRequest<Unit>
 {

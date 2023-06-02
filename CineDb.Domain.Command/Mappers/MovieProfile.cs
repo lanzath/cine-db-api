@@ -1,6 +1,6 @@
 using AutoMapper;
 using CineDb.Domain.Entities;
-using CineDb.Domain.Command.Movies.Create;
+using CineDb.Domain.Command.Commands.Movies.Create;
 using CineDb.Domain.Command.Movies.Update;
 
 namespace CineDb.Domain.Command.Mappers;

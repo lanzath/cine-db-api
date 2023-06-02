@@ -1,4 +1,5 @@
-using CineDb.Domain.Command.Movies.Create;
+using CineDb.Domain.Command.Commands.Movies.Delete;
+using CineDb.Domain.Command.Commands.Movies.Create;
 using CineDb.Domain.Command.Movies.Update;
 using CineDb.Domain.Query.Queries.Movies.GetById;
 using MediatR;
@@ -16,6 +17,11 @@ public sealed class MovieController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> CreateAsync([FromBody] CreateMovieCommand command)
     {
+        // TODO: Refactor to a middleware
+        if (!ModelState.IsValid)
+            return StatusCode(StatusCodes.Status400BadRequest, ModelState.Values.ToArray()[1].Errors);
+
+
         var response = await _mediator.Send(command);
 
         return Ok(response);
@@ -34,9 +40,21 @@ public sealed class MovieController : ControllerBase
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateAsync([FromRoute] int id, [FromBody] UpdateMovieCommand command)
     {
+        // TODO: Refactor to a middleware
+        if (!ModelState.IsValid)
+            return StatusCode(StatusCodes.Status400BadRequest, ModelState.Values.ToArray()[1].Errors);
+
         command.Id = id;
         var response = await _mediator.Send(command);
 
         return Ok(response);
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> RemoveAsync([FromRoute] int id)
+    {
+        await _mediator.Send(new DeleteMovieCommand(id));
+
+        return NoContent();
     }
 }

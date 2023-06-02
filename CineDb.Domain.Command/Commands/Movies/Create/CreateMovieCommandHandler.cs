@@ -3,7 +3,7 @@ using CineDb.Domain.Contracts;
 using CineDb.Domain.Entities;
 using MediatR;
 
-namespace CineDb.Domain.Command.Movies.Create;
+namespace CineDb.Domain.Command.Commands.Movies.Create;
 
 public sealed class CreateMovieCommandHandler : IRequestHandler<CreateMovieCommand, Unit>
 {
