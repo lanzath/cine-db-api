@@ -21,4 +21,6 @@ public class Movie : Entity<int>
 
     private Movie()
     { }
+
+    public void SetDirector(Director director) => Director = director;
 }

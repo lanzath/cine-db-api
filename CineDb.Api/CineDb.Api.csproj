@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <NoWarn>$(NoWarn);CS0618</NoWarn>
+    <NoWarn>$(NoWarn);CS0618;CS8765;CS8600;CS8602</NoWarn>
   </PropertyGroup>
 
 </Project>

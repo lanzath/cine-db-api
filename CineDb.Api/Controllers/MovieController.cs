@@ -19,7 +19,7 @@ public sealed class MovieController : ControllerBase
     {
         // TODO: Refactor to a middleware
         if (!ModelState.IsValid)
-            return StatusCode(StatusCodes.Status400BadRequest, ModelState.Values.ToArray()[1].Errors);
+            return StatusCode(StatusCodes.Status400BadRequest, ModelState);
 
 
         var response = await _mediator.Send(command);
@@ -42,7 +42,7 @@ public sealed class MovieController : ControllerBase
     {
         // TODO: Refactor to a middleware
         if (!ModelState.IsValid)
-            return StatusCode(StatusCodes.Status400BadRequest, ModelState.Values.ToArray()[1].Errors);
+            return StatusCode(StatusCodes.Status400BadRequest, ModelState);
 
         command.Id = id;
         var response = await _mediator.Send(command);

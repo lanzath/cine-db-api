@@ -2,7 +2,7 @@ using MediatR;
 
 namespace CineDb.Domain.Command.Commands.Movies.Delete;
 
-public class DeleteMovieCommand : IRequest<Unit>
+public sealed class DeleteMovieCommand : IRequest<Unit>
 {
     public int Id { get; set; }
 

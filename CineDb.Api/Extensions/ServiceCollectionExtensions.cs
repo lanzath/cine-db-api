@@ -9,6 +9,9 @@ using CineDb.Infrastructure.Database.EntityFramework.Repositories;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
+using CineDb.Infrastructure.Database.Dapper;
+using CineDb.Infrastructure.Database.Dapper.Repositories;
+using CineDb.Api.helpers;
 
 namespace CineDb.Api.Extensions;
 
@@ -16,13 +19,18 @@ public static class ServiceCollectionExtensions
 {
     public static IServiceCollection AddServices(this IServiceCollection services)
     {
+
         services.AddControllers().AddJsonOptions(options =>
         {
             options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
             options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault;
+            options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+            options.JsonSerializerOptions.Converters.Add(new EnumJsonConverter<Enum>());
         });
 
         services.AddTransient<IMovieRepository, MovieRepository>();
+        services.AddTransient<IMovieReadOnlyRepository, MovieReadOnlyRepository>();
+        services.AddSingleton<IDapperContext, DapperContext>();
 
         services.AddFluentValidationAutoValidation();
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
